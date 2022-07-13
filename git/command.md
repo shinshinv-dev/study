@@ -1,3 +1,20 @@
+- Init
+```
+echo "# modernJavascriptInit" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/shinshinv-dev/modernJavascriptInit.git
+git push -u origin master
+```
+
+- 패스워드 변경시
+```
+git config --global credential.helper cache
+git config --global credential.helper 'cache --timeout=3600'
+```
+
+
 - 설정보기
 ```
 git config -l'
