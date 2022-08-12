@@ -185,4 +185,16 @@ common diff options:
   -M            detect renames.
  ```
 
+- 원격 브랜치 확인
+```
+$ git branch -r
+```
 
+- 원격 브랜치 삭제
+```
+$ git push origin --delete [branch name]
+```
+- 로컬 브랜치 삭제
+```
+$ git branch -d [branch name]
+```
