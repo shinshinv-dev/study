@@ -4,3 +4,7 @@
 - public 폴더는 static 파일 저장
 
 # React 기초 2강 : 리액트에선 HTML대신 JSX 써야함 (JSX 사용법)
+ ```
+ <div className="App>
+ </div>
+ ```
