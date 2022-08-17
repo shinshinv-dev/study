@@ -13,4 +13,17 @@
  ```
  <div> {변수명} </div>
  <div> {함수명()} </div>
+ -----
+ import logo form '.logo.svg'
+ <img src={logo} />
+ ```
+ - 상상하는 모든곳에 {} 로 변수 집어 넣기 가능
+ ```
+ <div className={클래스명} />
+ ```
+ - 스타일은 직접 넣으면 안되고 오브젝트 형식으로 넣어야 함, 대쉬를 사용할수 없고 CamelCase 로 사용해야함
+ ```
+ <div style={ {color : 'blue', fontSize : '30px'} }> blog </div>
+ 
+ let post = {color : 'blue', fontSize : '30px'} // 변수로도 가능
  ```
