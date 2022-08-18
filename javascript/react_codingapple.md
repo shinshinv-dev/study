@@ -98,3 +98,5 @@ function Modal() {
 }
 
 ```
+- Component 를 많이 만들면 단점
+>- state 쓸 때 복잡해짐 - 상위 component에서 만든 state를 쓰려면 props 문법을 이용해야함
