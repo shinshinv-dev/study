@@ -59,4 +59,23 @@ function changeName() {
 <button onClick={ changeName }> ClicK! </button>
 ```
 
+# React 기초 5강 : state 맘대로 변경하는 법 (setState는 넘 옛날이고염)React 기초 6강 : Component로 HTML 깔끔하게 줄이는 법
+- return() 안에는 하나의 html tag 만 가능
+- HTML을 한단어로 줄여서 쓸수 있는 방법 : React의 Component 문법
+```
+return (
+  <div>
+    <Modal />
+  </div>
+)
+ 
+function Modal() {
+  return (
+    <div className="modal">
+      <h2>title</h2>
+      <p>date</p>
+      <p>content</p>
+    </div>
+  )
+}
 
