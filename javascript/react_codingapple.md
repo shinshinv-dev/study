@@ -83,7 +83,7 @@ function Modal() {
 >- 1. 함수 만들고 이름짓고 (Pascal Case)
 >- 2. 축약을 원하는 HTML 넣고
 >- 3. 원하는 곳에서 <함수명 />
-- fregment 문법 (한개의 div 조항 피하기)
+- fregment 문법 - return() 내부를 묶을때 의미없는 <div> 쓰기 싫으면 <> </>
 ```
 function Modal() {
   return (
