@@ -45,5 +45,7 @@ let [like, setLike] = useState(0);
 ```
 
 # React 기초 5강 : state 맘대로 변경하는 법 (setState는 넘 옛날이고염)
+- state 는 원본수정 불가 > 복사본을 만들어서 수정해야함 > 수정시에는 deep copy (...var) 사용
+- react 대원칙 : immutable date
 
 
