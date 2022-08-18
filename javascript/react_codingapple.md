@@ -27,3 +27,13 @@
  
  let post = {color : 'blue', fontSize : '30px'} // 변수로도 가능
  ```
+ 
+ # React 기초 3강 : 리액트에선 변수말고 state 만들어 쓰랬죠 (useState)
+ - state 사용법 / destruecturing
+ - state에 데이터 저장해놓는 이유 : 웹이 App 처럼 동학하게 만들고 싶어서 / state가 변경되면 HTML이 자동으로 재렌더링이 된다
+ ```
+ import {useState } from 'react';
+ let [a ,b] = useState('Test');
+ ```
+
+
