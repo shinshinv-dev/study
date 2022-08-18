@@ -44,5 +44,6 @@ let [like, setLike] = useState(0);
 <h3> {content[0]} <span onClick={ ()=> { setLike(like+1) } }> 🤌 </span> {like} </h3>
 ```
 
+# React 기초 5강 : state 맘대로 변경하는 법 (setState는 넘 옛날이고염)
 
 
