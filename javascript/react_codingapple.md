@@ -35,5 +35,9 @@
  import {useState } from 'react';
  let [a ,b] = useState('Test');
  ```
+ 
+# React 기초 4강 : 리액트에서 버튼에 이벤트 리스너 (핸들러) 장착하는 법
+- onClick={ 
+
 
 
