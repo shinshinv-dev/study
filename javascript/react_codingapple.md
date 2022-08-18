@@ -41,7 +41,7 @@
 - 두번째변수(ex.setLike) 로 state 변경
 ```
 let [like, setLike] = useState(0);
- <h3> {content[0]} <span onClick={ ()=> { setLike(like+1) } }> 🤌 </span> {like} </h3>
+<h3> {content[0]} <span onClick={ ()=> { setLike(like+1) } }> 🤌 </span> {like} </h3>
 ```
 
 
