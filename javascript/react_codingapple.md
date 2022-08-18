@@ -37,7 +37,12 @@
  ```
  
 # React 기초 4강 : 리액트에서 버튼에 이벤트 리스너 (핸들러) 장착하는 법
-- onClick={ 
+- onClick={클릭될때 실행할 함수}
+- 두번째변수(ex.setLike) 로 state 변경
+```
+let [like, setLike] = useState(0);
+ <h3> {content[0]} <span onClick={ ()=> { setLike(like+1) } }> 🤌 </span> {like} </h3>
+```
 
 
 
