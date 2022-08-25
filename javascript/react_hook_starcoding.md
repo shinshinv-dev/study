@@ -1,15 +1,15 @@
 # useState 15분만에 마스터하기 | 리액트 훅스 시리즈
 ```
-# 1
+// 1
 const [state, setState] = useState(초기값);
 
-# 2
+// 2
 setState((prevState) => {
   // some works...
   return new State;
 });
 
-# 3
+// 3
 useState(() => {
   return heavyWorks();
 });
@@ -20,7 +20,19 @@ useState(() => {
 - Update : 다시 렌더링
 - Unmount: 화면에서 사라질때
 
+- 렌더링 될때 마다 실행
 ```
-useEffect( () => { //작업... } )
+// 1
+useEffect( () => {
+  //작업... 
+});
+```
+
+- 화면에 첫 렌더링 될때 실행 / value 값이 바뀔때
+```
+// 2
+useEffect( () => {
+  //작업...
+}, [value] );
 ```
 
