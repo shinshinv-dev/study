@@ -59,7 +59,7 @@ useEffect( () => {
 # useRef 완벽 정리 1# 변수 관리 | 리액트 훅스 시리즈
 - useRef : 컴포넌트가 Unmount 되기 전까지는 값을 유지
   >- 1.저장공간으로 사용 : Ref의 변화 -> No 렌더링 -> 변수들의 값이 유지됨 / State의 변화 -> 렌더링 -> 컴포넌트 내부 변수들 초기화
-  >- 2.
+  >- 2.aa
 ```
 const ref = useRef(value)
 // ref : { current: value}
