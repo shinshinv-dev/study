@@ -79,4 +79,4 @@ const ref = useRef(value)
 
 # useContext + Context API | 리액트 훅스 시리즈
 - useContext는 context로 공유한 데이터를 받아올수 있는 기능
-- 그럼 Props는? Context를 사용하면 컴포넌트를 
+- 그럼 Props는? Context를 사용하면 컴포넌트를 재사용하기 어려워 질수 있다
