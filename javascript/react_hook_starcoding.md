@@ -69,6 +69,10 @@ ref.current = "nice"
 # useRef 완벽 정리 2# DOM 요소 접근 | 리액트 훅스 시리즈
 - ex) Input 요소에 포커스를 줄때
 ```
+useEffect(() => {
+    ref.current.focus();
+},[]);
+
 const ref = useRef(value)
 <input ref = {ref} />
 ```
