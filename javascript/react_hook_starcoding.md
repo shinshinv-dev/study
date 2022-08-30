@@ -81,8 +81,21 @@ const ref = useRef(value)
 - useContext는 context로 공유한 데이터를 받아올수 있는 기능
 - 그럼 Props는? Context를 사용하면 컴포넌트를 재사용하기 어려워 질수 있음 / Props drilling 을 피하기 위한 목적이라면 Component Composistion을 먼저 고려
 ```
+// ThemeContext.js
 import { createContext } from 'react';
 
 export const ThemeContext = createContext(null);
+
+// App.js
+import { ThemeContext } from.  'ThemeContext';
+...
+return (
+  <ThemeContext.Provider value={{is, setIsDark}}>
+    <Page />
+  </ThemeContext.Provider>
+);
+
+// Page.jsx
+const {isDark, setIsDark} = useContext(ThemeContext);
 ```
 
