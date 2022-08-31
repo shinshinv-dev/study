@@ -8,21 +8,24 @@ val list = mutableListOf(1,2,3,4,5)
 // list.add(6)
 // list.add(7)
 
-list.run { //this: list
+val result = list.run { //this: list
   add(6)
 }
 ```
 - list : 변수명을 지정해서 사용할수 있음 (alias)
 ```
 // 1
-list.let {
+val result = list.let {
   it.add(6)
   it.add(7)
 }
 
 // 2 (alias)
-list.let { item ->
+val result = list.let { item ->
   item.add(6)
   item.add(7)
 }
 ```
+- apply : run 과 사용법이 같음 > 마지막 줄과 상관없이 원래 변수에 변경된 값(객체 자체를 리턴)
+
+- also : let 과 사용법이 같음 > 마지막 줄과 상관없이 원래 변수에 변경된 값(객체 자체를 리턴)
