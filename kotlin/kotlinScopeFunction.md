@@ -29,3 +29,16 @@ val result = list.let { item ->
 - apply : run 과 사용법이 같음 > 마지막 줄과 상관없이 원래 변수에 변경된 값(객체 자체를 리턴), run 은 마지막줄의 값을 리턴
 
 - also : let 과 사용법이 같음 > 마지막 줄과 상관없이 원래 변수에 변경된 값(객체 자체를 리턴), let 은 마지막줄의 값을 리턴
+
+- with : 
+```
+binding.button.setOnClick()
+binding.imageView.setImage()
+binding.textView.text = " "
+
+with(binding) {
+  button.setOnClick()
+  ...
+
+}
+```
