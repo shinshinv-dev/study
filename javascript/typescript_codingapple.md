@@ -68,3 +68,15 @@ type Member = {
 }
 ```
 
+# 타입스크립트 기본 타입 정리 (primitive types)
+```
+let name: string = shin;
+let age: number = 23;
+let married: boolean = true;
+let members: string[] = ['shin', 'noh'];
+let membersobj: {member1: string, member2: string}= { member1: 'shin', member2: 'noh'}
+
+```
+- beginer : 온갖타입을 다 지정함 / pro : 타입지정이 원래 자동으로 됨(생략가능)
+
+# 타입을 미리 정하기 애매할 때 (union type, any, unknown)
