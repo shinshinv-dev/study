@@ -80,3 +80,20 @@ let membersobj: {member1: string, member2: string}= { member1: 'shin', member2: 
 - beginer : 온갖타입을 다 지정함 / pro : 타입지정이 원래 자동으로 됨(생략가능)
 
 # 타입을 미리 정하기 애매할 때 (union type, any, unknown)
+- union type - 할당을 해버리면 타입이 확정됨
+```
+let member :number | string = 'shin'
+let member :(number | string) = 'shin'
+let members :(number|string)[] = [1, '2', 3];
+```
+- any : 모든 자료형 허용 > typescript 를 쓰는 의미가 없음
+```
+let name :any;
+```
+- unknown : 모든 자료형 허용> any보다는 안전
+```
+let names :unknown;
+names = 123;
+names = {};
+let var1 :string = names; // 오류 스트링만 가능
+```
