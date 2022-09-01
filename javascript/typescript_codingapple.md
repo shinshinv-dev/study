@@ -4,7 +4,26 @@
 ```
 let name: string = 'shin';
 let name: { name?: string } = { };
+let name: string | number = 123;
+
+// type alias
+type MyType = string | number;
+
+function multiply(x : number) : number {
+  return x * 2
+}
+
+// tuple type
+type Member = [number, boolean];
+let john: Member = [123, true]
+
+// object key
+// type Member = { name: string }
+type Member = {
+  [key: string]: string
+}
 ```
+
 - Type 종류
 >- string
 >- number
