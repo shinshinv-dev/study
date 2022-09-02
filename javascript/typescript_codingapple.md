@@ -90,10 +90,38 @@ let members :(number|string)[] = [1, '2', 3];
 ```
 let name :any;
 ```
-- unknown : 모든 자료형 허용> any보다는 안전
+- unknown : 모든 자료형 허용 > any보다는 안전 (타입이 있는 다른변수에 할당이 안됨) >> any보다는 그나마 나음
 ```
 let names :unknown;
 names = 123;
 names = {};
 let var1 :string = names; // 오류 스트링만 가능
 ```
+
+# 함수에 타입 지정하는 법 & void 타입
+
+```
+// 기존
+function fun(x) {
+    return x * 2
+}
+fun(30)
+
+// TS
+function fun(x :number) :number {
+    return x * 2
+}
+fun(30)
+
+// TS void
+function fun() :void{
+    1 + 1
+}
+
+// TS parameter option 
+function fun(x? :number) :void { // == function fun(x :number|undefined) :void { 
+    1 + 1
+}
+fun()
+```
+
