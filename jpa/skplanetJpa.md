@@ -6,3 +6,20 @@
 >- 1차캐시와 동일성 보장
 >- 트랜잭션을 지원하는 쓰기 지연 - INSERT ( 모았다가 한번에 Commit) >> 설정필요
 >- 지연 로딩과 즉시 로딩 >> 설정 필요
+
+[토크ON세미나] JPA 프로그래밍 기본기 다지기 2강 - JPA 기초와 매핑 | T아카데미
+- java application에 직접코딩
+```
+psvm
+  EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello"); // 설정가져오기
+  EntityManager em = emf.createEntityManager();
+  EntityTransaction tx = em.getTransaction();
+  tx.begin()
+  Member member = new Member();
+  member.setId(100L);
+  member.setName("KSK");
+  em.persist(member);
+  tx.commit();
+  em.close();
+  emf.close();
+```
