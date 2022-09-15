@@ -41,7 +41,8 @@ private String name;
 >- @Temporal
 >>- 날짜타입매핑
 >>- 어플리케이션에서 사용하지만 DB 에는 저장하지 않을 필드
->- @Enumerated(EnumType.STRING) >> 현업에서는 무조건 STRING, ODINAL일 경우 숫자가 DB 에 저장
+>- @Enumerated(EnumType.STRING) 
+>>- 현업에서는 무조건 STRING, ODINAL일 경우 숫자가 DB 에 저장
 >- @Lob
 >>- String 타입에 쓰면 CLOB, Byte 타입에 쓰면 BLOB
 >- @Transient
