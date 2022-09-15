@@ -46,7 +46,12 @@ private String name;
 >- @Lob
 >>- String 타입에 쓰면 CLOB, Byte 타입에 쓰면 BLOB
 >- @Transient
-
+- 식별자 매핑
+>- @Id(직접 매핑) / @GeneratedValue(strategy = GenerationType.IDENTITY)
+>- IDENTITY : DB 에 위임
+>- SEQUENCE : 데이터베이스 시퀀스 오브젝트 사용
+>- TABLE : 키 생성용 테이블 사용
+>- AUTO: 방언에 따라 자동 지정
 
 
 
