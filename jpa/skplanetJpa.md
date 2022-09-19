@@ -57,6 +57,15 @@ private String name;
 
 # [토크ON세미나] JPA 프로그래밍 기본기 다지기 4강 - 연관관계 매핑
 - 단방향매핑
+```
+@Id @GeneratedValue
+private Long id;
+private String name;
+private int age;
 
+@ManyToOne
+@JoinColumn(name = "TEAM_ID")
+private Team team;
+```
 
 
