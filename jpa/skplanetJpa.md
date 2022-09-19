@@ -56,8 +56,10 @@ private String name;
 >- 권장 : Long + 대체키 + 키 생성전략 사용 (비지니스키에서 선택하지 않음)
 
 # [토크ON세미나] JPA 프로그래밍 기본기 다지기 4강 - 연관관계 매핑
-- 단방향매핑
+- 단방향 매핑
+>- LAZY로 바르는걸 권장
 ```java
+// class Member
 @Id @GeneratedValue
 private Long id;
 private String name;
@@ -69,6 +71,19 @@ private int age;
 @JoinColumn(name = "TEAM_ID")
 private Team team;
 ```
-- LAZY로 바르는걸 권장
+- 양방향 매핑
+>- Team 에서 Member 접근
+```java
+// class Team
+
+@Id @GeneratedValue
+private Long id;
+private String name;
+
+@OneToMany(mappedBy = "team")
+List<Member> mebers = new ArrayList<Member>();
+
+```
+
 
 
