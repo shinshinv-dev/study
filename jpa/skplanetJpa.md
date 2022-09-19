@@ -9,7 +9,7 @@
 
 # [토크ON세미나] JPA 프로그래밍 기본기 다지기 2강 - JPA 기초와 매핑
 - java application에 직접코딩
-```
+```java
 psvm
   EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello"); // 설정가져오기
   EntityManager em = emf.createEntityManager();
@@ -34,7 +34,7 @@ psvm
 >>- create/create-drop/update/validate/none
 - 매핑 어노테이션
 >- @Column
-```
+```java
 @Column(name = "USERNAME")
 private String name;
 ```
@@ -57,7 +57,7 @@ private String name;
 
 # [토크ON세미나] JPA 프로그래밍 기본기 다지기 4강 - 연관관계 매핑
 - 단방향매핑
-```
+```java
 @Id @GeneratedValue
 private Long id;
 private String name;
@@ -69,5 +69,6 @@ private int age;
 @JoinColumn(name = "TEAM_ID")
 private Team team;
 ```
+- LAZY로 바르는걸 권장
 
 
