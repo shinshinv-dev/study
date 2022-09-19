@@ -75,7 +75,6 @@ private Team team;
 >- Team 에서 Member 접근
 ```java
 // class Team
-
 @Id @GeneratedValue
 private Long id;
 private String name;
@@ -84,6 +83,8 @@ private String name;
 List<Member> mebers = new ArrayList<Member>();
 
 ```
+
+# [토크ON세미나] JPA 프로그래밍 기본기 다지기 5강 - 양방향 매핑 | T아카데미
 
 
 
