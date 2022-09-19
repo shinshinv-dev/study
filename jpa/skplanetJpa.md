@@ -102,6 +102,29 @@ List<Member> mebers = new ArrayList<Member>();
 >- 양방향 매핑은 반대 방향으로 조회(객체 그래프 탐색) 기능이 추가된 것 뿐
 >- JPQL에서 역방향으로 탐색할 일이 많음
 >- 단반향 매핑을 잘 하고 양방향은 필요할 때 추가해도 됨(테이블에 영향 X)
+- 연관관계 매핑 어노테이션
+```java
+@ManyToOne
+@OneToMany
+@OneToOne
+@ManyToMany
+@JoinColumn
+@JoinTable
+```
+- 상속관계 매핑 어노테이션
+```java
+@Inheritance
+@DiscriminatorColumn
+@DiscriminatorValue
+@MappedSuperclass
+```
+- 복합키 어노테이션
+```java
+@IdClass
+@Embeddedld
+@Embeddable
+@MapsId
+```
 
 
 
