@@ -84,7 +84,7 @@ List<Member> mebers = new ArrayList<Member>();
 
 ```
 
-# [토크ON세미나] JPA 프로그래밍 기본기 다지기 5강 - 양방향 매핑 | T아카데미
+# [토크ON세미나] JPA 프로그래밍 기본기 다지기 5강 - 양방향 매핑
 - 양방향 매핑 규칙 (연관관걔의 주인)
 >- 객체의 두 관계중 하나를 연관관걔의 주인으로 지정
 >- 연관관계의 주인만이 외래 키를 관리(등록, 수정)
@@ -126,7 +126,7 @@ List<Member> mebers = new ArrayList<Member>();
 @MapsId
 ```
 
-# [토크ON세미나] JPA 프로그래밍 기본기 다지기 6강 - JPA 내부구조 | T아카데미
+# [토크ON세미나] JPA 프로그래밍 기본기 다지기 6강 - JPA 내부구조
 - 영속성 컨텍스트
 >- : 엔티티를 영구 저장하는 환경
 >- 논리적인 개념
@@ -226,6 +226,23 @@ query.setParameter("name", nameParam);
 - Named 쿼리 - 어노테이션
 >- 어플리케이션 로딩시점에 오류 확인가능
 
-# [토크ON세미나] JPA 프로그래밍 기본기 다지기 8강 - Spring Data JPA와 QueryDSL 이해 | T아카데미
+# [토크ON세미나] JPA 프로그래밍 기본기 다지기 8강 - Spring Data JPA와 QueryDSL 이해
+- Spring Data JPA
+>- 지루하게 반복되는 CRUD 문제를 세련된 방법으로 해결
+>- 개발자는 인터페이스만 작성
+>- 스프링 데이터 JPA가 구현 객체를 동적으로 생성해서 주입
+>- 특정필드로 검색, 정렬, 페이징이 가능
+>- @Query를 사용해서 직접 JPQL 지정 가능
+```java
+@Query("select m from Member where m.username = ?1")
+Member findByUsername(String username, Pageable pageable);
+```
+
+
+
+
+
+
+
 
 #
