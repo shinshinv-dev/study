@@ -202,7 +202,7 @@ em.close()
 >- JPA Criteria
 >- QueryDSL
 >- 네이티브 SQL
->- JDBC API 직접사용, MyBatis, SpringJdbcTemplate 함께 
+>- JDBC API 직접사용, MyBatis, SpringJdbcTemplate 함께 사용
 - 이슈
 >- 문제는 검색쿼리
 >- 검색을 할때도 테이블이 아닌 엔티티 객체를 대상으로 검색
