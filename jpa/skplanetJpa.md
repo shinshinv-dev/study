@@ -172,16 +172,51 @@ em.remove(memberA);
 >- 영속성 컨텍스트를 비우지 않음
 >- 영속성 컨텍스트의 변경내용을 데이터베이스에 동기화
 >- 트랜잭션이라는 작업단위가 중요 > 커밋 직전에만 동기화 하면 됨
+- 준영속 상태
+>- 영속 > 준영속
+>- 영속 상태의 엔티티가 영속성 컨텍스트에서 분리(detached)
+>- 영속성 컨텍스트가 제공하는 기능을 사용 못함
+- 준영속 상태로 만드는 방법
+```java
+// 특정 엔티티만 준영속 상태로 전환
+em.detach(entity)
+
+// 영속성 컨텍스트를 완전히 초기화
+em.clear()
+
+// 영속성 컨텍스트를 종료
+em.close()
+
+```
+- 지연로딩 LAZY를 사용하면 연관된 엔티티를 프록시 객체로 만들어지고 실제 사용할때 다시 가져옴
+- 프록시와 즉시로딩 주의
+>- 가급적 지연 로딩을 사용
+>- 즉시 로딩을 적용하면 예상하지 못한 SQL이 발생
+>- 즉시 로딩은 JPQL에서 N+1 문제를 일으킴
+>- @ManyToOne, @OneToOne은 기본이 즉시 로딩 > LAZY로 설정
+>- @OneToMany, @ManyToMany는 기본이 지연로딩
+
+# [토크ON세미나] JPA 프로그래밍 기본기 다지기 7강 - JPA 객체지향쿼리 | T아카데미
+- 다양한 쿼리 방법을 지원
+>- 문제는 검색쿼리
+>- 검색을 할때도 테이블이 아닌 엔티티 객체를 대상으로 검색
+>- 모든 DB 데이터를 객체로 변환해서 검색하는 것은 불가능
+>- 애플리케이션이 필요한 데이터만 DB 에서 불러오려면 결국 검색 조건이 포함된 SQL이 필요
+- JPQL
+>- 테이블이 아닌 객체를 대상으로 검색하는 객체 지향 쿼리
+>- SQL 을 추상화해서 특정 DB SQL에 의존X
+>- JPQL을 한마디로 정의하면 객체지향 SQL
+```java
+String jpql = "select m From Member m where m.name like '%hello%'";
+List<Member> result = em.createQuery(jpql, Member.class).getResultList();
+
+// 파라미터 바인딩
+String jpql = "select m From Member m where m.name =:name";
+query.setParameter("name", nameParam);
+```
+>- 조인, 페치조인
+
 
 
 
 #
-
-
-
-
-
-
-
-
-
