@@ -170,3 +170,11 @@ em.remove(memberA);
 >- JPQL 쿼리 실행 - 플러시 자동 
 
 
+
+
+
+
+
+
+
+
