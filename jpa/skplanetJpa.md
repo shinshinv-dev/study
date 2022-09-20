@@ -215,7 +215,8 @@ String jpql = "select m From Member m where m.name =:name";
 query.setParameter("name", nameParam);
 ```
 >- 조인, 페치조인
-
+- LAZY 로 설정했을때 갯수만큼 쿼리를 도는 문제가 "N+1" 문제
+>- 해겳방안은 페치조인
 
 
 
