@@ -237,6 +237,29 @@ query.setParameter("name", nameParam);
 @Query("select m from Member where m.username = ?1")
 Member findByUsername(String username, Pageable pageable);
 ```
+- QueryDSL
+>- SQL, JPQL을 코드로 작성할 수 있도록 도와주는 빌더 API
+>- JPA 크리테리아에 비해서 편리하고 실용적임
+>- 오픈소스
+>- 장점
+>>- 문자가 아닌 코드로 작성
+>>- 컴파일 시점에 문법 오류 발견
+>>- 코드 자동완성(IDE 도움)
+>>- 단순하고 쉬움 > 코드 모양이 JPQL과 거의 비슷
+>>- 동적 쿼리
+```java
+// JPQL
+select m from Member m where m.age > 18
+
+JPAFactoryQuery query = new JPAQueryFactory(em);
+QMember m = QMember.member;
+
+List<Member> list = 
+  query.selectFrom(m)
+    .where(m.age.gt(18))
+    .orderyBy(m.name.desc())
+    .fetch();
+```
 
 
 
