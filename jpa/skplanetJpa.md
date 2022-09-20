@@ -212,6 +212,7 @@ em.close()
 >- 테이블이 아닌 객체를 대상으로 검색하는 객체 지향 쿼리
 >- SQL 을 추상화해서 특정 DB SQL에 의존X
 >- JPQL을 한마디로 정의하면 객체지향 SQL
+>- 조인, 페치조인 가능
 ```java
 String jpql = "select m From Member m where m.name like '%hello%'";
 List<Member> result = em.createQuery(jpql, Member.class).getResultList();
@@ -220,11 +221,11 @@ List<Member> result = em.createQuery(jpql, Member.class).getResultList();
 String jpql = "select m From Member m where m.name =:name";
 query.setParameter("name", nameParam);
 ```
->- 조인, 페치조인 가능
 - LAZY 로 설정했을때 갯수만큼 쿼리를 도는 문제가 "N+1" 문제
 >- 해결방안이 페치조인
 - Named 쿼리 - 어노테이션
 >- 어플리케이션 로딩시점에 오류 확인가능
 
+# [토크ON세미나] JPA 프로그래밍 기본기 다지기 8강 - Spring Data JPA와 QueryDSL 이해 | T아카데미
 
 #
