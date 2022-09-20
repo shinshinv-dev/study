@@ -131,9 +131,42 @@ List<Member> mebers = new ArrayList<Member>();
 >- : 엔티티를 영구 저장하는 환경
 >- 논리적인 개념
 >- 눈에 보이지 않음
->- 엔티티 매니저를 통해서 영속성 컨텍스트에 
+>- 엔티티 매니저를 통해서 영속성 컨텍스트에 접근
+```java
+// 객체를 생성한 상태(비영속)
+Member member = new Member();
+member.setId("member1");
+member.setUsername("admin");
 
+// 객태를 저장한 상태(영속)
+// 1차 캐시에 저장
+em.persist(member);
 
+// 1차 캐시에서 조회
+Member findMember = em.find(Member.class, "member1");
+// DB에서 조회해서 1차 캐시에 저장
+Member findMember = em.find(Member.class, "member2");
 
+```
+- 1차 캐시에서 관리되는 상태를 영속상태라고 부름
+- 쓰기 지연 SQL 저장소가 있어서 한꺼번에 커밋함
+- 엔티티 수정 - 변경감지(Dirty Checking)
+```java
+Member memberA = em.find(Member.class, "memberA");
+
+memberA.setUsername("hi");
+
+// em.update(member) > 이런 코드 필요 없음
+
+transaction.commit();
+```
+- 엔티티 삭제
+```java
+em.remove(memberA);
+```
+- 영속성 컨텍스트를 플러시하는 방법
+>- em.flush() - 직접호출
+>- 트랜잭션 커밋 - 플러시 자동 호출
+>- JPQL 쿼리 실행 - 플러시 자동 
 
 
