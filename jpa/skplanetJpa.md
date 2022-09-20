@@ -241,6 +241,7 @@ Member findByUsername(String username, Pageable pageable);
 >- SQL, JPQL을 코드로 작성할 수 있도록 도와주는 빌더 API
 >- JPA 크리테리아에 비해서 편리하고 실용적임
 >- 오픈소스
+>- String 으로 작성하던 쿼리문을 코드로 작성하여 오류 가능성이 적음
 >- 장점
 >>- 문자가 아닌 코드로 작성
 >>- 컴파일 시점에 문법 오류 발견
@@ -260,10 +261,6 @@ List<Member> list =
     .orderyBy(m.name.desc())
     .fetch();
 ```
-
-
-
-
 
 
 
