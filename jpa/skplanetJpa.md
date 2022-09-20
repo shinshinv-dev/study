@@ -198,6 +198,12 @@ em.close()
 
 # [토크ON세미나] JPA 프로그래밍 기본기 다지기 7강 - JPA 객체지향쿼리 | T아카데미
 - 다양한 쿼리 방법을 지원
+>- JPQL
+>- JPA Criteria
+>- QueryDSL
+>- 네이티브 SQL
+>- JDBC API 직접사용, MyBatis, SpringJdbcTemplate 함께 
+- 이슈
 >- 문제는 검색쿼리
 >- 검색을 할때도 테이블이 아닌 엔티티 객체를 대상으로 검색
 >- 모든 DB 데이터를 객체로 변환해서 검색하는 것은 불가능
@@ -214,9 +220,9 @@ List<Member> result = em.createQuery(jpql, Member.class).getResultList();
 String jpql = "select m From Member m where m.name =:name";
 query.setParameter("name", nameParam);
 ```
->- 조인, 페치조인
+>- 조인, 페치조인 가능
 - LAZY 로 설정했을때 갯수만큼 쿼리를 도는 문제가 "N+1" 문제
->- 해겳방안은 페치조인
+>- 해결방안이 페치조인
 
 
 
